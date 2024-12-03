@@ -29,7 +29,7 @@ body {
 .post-image {
   position: absolute;
   z-index: 99;
-  top: -335px;
+  top: -10%;
 }
 
 .post-image img {
@@ -138,7 +138,7 @@ p {
   position: relative;
   height: 100%;
   padding-top: 80px;
-  background: url("../images/image2.png") no-repeat;
+  background: url("../images/full-img-2.png") no-repeat;
   background-size: contain;
   display: flex;
   justify-content: center;
