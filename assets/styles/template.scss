@@ -37,11 +37,13 @@ body {
     background-attachment: fixed;
     height: auto;
 }
-.post-image{
+
+.post-image {
     position: absolute;
     z-index: 99;
     top: -335px;
 }
+
 .post-image img {
     width: auto;
     height: auto;
@@ -96,7 +98,6 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 80px;
 
     &::before {
         content: "";
@@ -156,8 +157,8 @@ p {
     position: relative;
     height: 100%;
     // min-height: 2078px;
-
-    background: url("../images/full-img-2.png") no-repeat;
+    padding-top: 80px;
+    background: url("../images/image2.png") no-repeat;
     background-size: contain;
     // background-position: center;
     display: flex;
@@ -165,16 +166,16 @@ p {
     text-align: center;
     margin-bottom: 100px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.1);
-        z-index: 1;
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: rgba(0, 0, 0, 0.1);
+    //     z-index: 1;
+    // }
 
     &__content {
         height: 100%;
