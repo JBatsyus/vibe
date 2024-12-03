@@ -68,7 +68,6 @@ p {
     margin: 0 auto;
     padding-right: 20px;
     padding-left: 20px;
-
 }
 
 .h2 {
@@ -164,7 +163,6 @@ p {
     justify-content: center;
     text-align: center;
     margin-bottom: 100px;
-
 
     &__content {
         height: 100%;
@@ -321,7 +319,6 @@ p {
                 color: $base-color;
                 width: 100%;
 
-
                 .time {
                     width: 95px;
                     font-family: $Inter600;
@@ -331,7 +328,6 @@ p {
                     flex-grow: 1;
                     height: 2px;
                     background-color: $base-color;
-
                 }
 
                 .desc {
@@ -368,7 +364,6 @@ p {
                 object-fit: contain;
             }
         }
-
     }
 
     &__posttitle {
@@ -376,9 +371,6 @@ p {
         width: 100%;
         text-align: center;
     }
-
-
-
 }
 
 .footer {
