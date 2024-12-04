@@ -127,7 +127,10 @@ p {
   width: max-content;
   margin: 0 auto 25px auto;
 }
-.first-screen a {
+.first-screen .link-bgi {
+  position: relative;
+}
+.first-screen .link-bgi a {
   font-family: "Inter-500", sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -336,7 +339,15 @@ p {
   height: 100%;
 }
 
+@media (max-width: 1780px) {
+  .post-image {
+    top: -180px;
+  }
+}
 @media (max-width: 1200px) {
+  .post-image {
+    top: -100px;
+  }
   .h2 {
     font-size: 3rem;
   }
@@ -397,6 +408,21 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .post-image {
+    display: none;
+  }
+  .link-bgi {
+    background: url("../images/ok1.png") no-repeat center center;
+    background-size: 120% auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .link-bgi a {
+    position: absolute;
+    z-index: 1;
+  }
   .h2 {
     font-size: 1.5625rem;
   }
@@ -431,6 +457,12 @@ p {
 }
 @media (max-width: 450px) {
   .h2 {
+    font-size: 18px;
+  }
+  .link-bgi {
+    height: 200px;
+  }
+  .first-screen .link-bgi a {
     font-size: 18px;
   }
   .first-screen .linear-gradient {
