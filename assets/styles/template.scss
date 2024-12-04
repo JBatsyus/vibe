@@ -10,6 +10,12 @@ $Inter700: "Inter-700",
 sans-serif;
 $base-color: #fff;
 
+$baseFontSize: 16px;
+
+@function rem($px) {
+    @return calc($px / 16px)+0rem;
+}
+
 html,
 body {
     height: 100%;
@@ -41,13 +47,14 @@ body {
 .post-image {
     position: absolute;
     z-index: 99;
-    top: -10%;
+    top: -230px;
+    left: 0;
+    right: 0;
 }
 
 .post-image img {
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
     display: block;
 }
 
@@ -73,7 +80,7 @@ p {
 .h2 {
     font-family: $Inter700;
     font-weight: 700;
-    font-size: 64px;
+    font-size: rem(64px);
     text-transform: uppercase;
     text-align: center;
     color: $base-color;
@@ -82,7 +89,7 @@ p {
 .h3 {
     font-family: $Inter500;
     font-weight: 500;
-    font-size: 24px;
+    font-size: rem(24px);
     text-transform: uppercase;
     text-align: center;
     color: $base-color;
@@ -117,6 +124,10 @@ p {
             margin-bottom: 53px;
             max-height: 433px;
             height: 100%;
+        }
+
+        svg {
+            margin-bottom: 25px;
         }
 
         p {
@@ -320,7 +331,6 @@ p {
                 width: 100%;
 
                 .time {
-                    width: 95px;
                     font-family: $Inter600;
                 }
 
@@ -328,6 +338,7 @@ p {
                     flex-grow: 1;
                     height: 2px;
                     background-color: $base-color;
+                    min-width: 25px;
                 }
 
                 .desc {
@@ -383,5 +394,156 @@ p {
         img {
             height: 100%;
         }
+    }
+}
+
+@media (max-width: 1200px) {
+    .h2 {
+        font-size: rem(48px);
+    }
+
+    .h3 {
+        font-size: rem(24px);
+    }
+
+    .first-screen {
+        height: 90vh;
+        min-height: 800px;
+    }
+
+    .second-screen__content .content-bottom___list {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .second-screen__content .content-bottom__item {
+        display: grid;
+        grid-template-columns: 95px 0.5fr 1fr;
+    }
+}
+
+@media (max-width: 991px) {
+    .h2 {
+        font-size: rem(35px);
+    }
+
+    .h3 {
+        font-size: rem(20px);
+    }
+
+    .first-screen__content p {
+        font-size: 25px;
+    }
+
+    .second-screen__content .content-top {
+        margin: 0 25px 200px 25px;
+    }
+
+    .second-screen__content .content-top__item {
+        max-width: 220px;
+    }
+
+    .second-screen__content .content-top__item-desc {
+        font-size: 19px;
+    }
+
+    .second-screen__content .content-middle__list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .second-screen__content .content-middle__item {
+        height: auto;
+        aspect-ratio: 16 / 8;
+    }
+
+    .second-screen__content .content-bottom {
+        margin: 0 25px;
+    }
+
+    .second-screen__content .content-bottom___list {
+        gap: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .second-screen__content .content-bottom__item {
+        gap: 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h2 {
+        font-size: rem(25px);
+    }
+
+    .h3 {
+        font-size: rem(16px);
+    }
+    .first-screen__content .img-wrap{
+        max-height: 350px;
+    }
+    .first-screen__content p {
+        font-size: 20px;
+    }
+
+    .second-screen__content .content-top {
+        margin: 0 10px 100px 10px;
+    }
+
+    .second-screen__content .content-top__item-desc {
+        font-size: 16px;
+    }
+
+    .second-screen__content .content-middle__item-title {
+        font-size: 30px;
+    }
+
+    .second-screen__content .content-bottom__title {
+        margin-bottom: 50px;
+    }
+
+    .second-screen__content .content-bottom__item {
+        grid-template-columns: 85px 0.1fr 1fr;
+        font-size: 18px;
+    }
+
+    .third-screen {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .h2 {
+        font-size: 18px;
+    }
+    .first-screen .linear-gradient {
+        padding: 25px;
+    }
+
+    .second-screen__content .content-top__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .second-screen__content .content-top__item {
+        height: 130px;
+    }
+
+    .second-screen__content .content-bottom {
+        margin: 0 10px;
+    }
+
+    .second-screen__content .content-bottom__item {
+        grid-template-columns: 55px 0.2fr 1fr;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .third-screen__content {
+        margin: 0 10px;
+        gap: 50px;
     }
 }
