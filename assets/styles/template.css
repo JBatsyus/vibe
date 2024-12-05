@@ -32,7 +32,7 @@ body {
   top: -170px;
   left: 0;
   right: 0;
-  min-height: 100vh;
+  min-height: 1200px;
   background: url("../images/ok.png") no-repeat center top -50px/cover;
 }
 
@@ -338,7 +338,6 @@ p {
 
 @media (max-width: 1780px) {
   .post-image {
-    min-height: 110vh;
     top: -180px;
   }
 }
@@ -368,9 +367,6 @@ p {
   }
   .h3 {
     font-size: 1.25rem;
-  }
-  .post-image {
-    min-height: 97vh;
   }
   .first-screen__content p {
     font-size: 25px;
@@ -405,7 +401,6 @@ p {
 }
 @media (max-width: 768px) {
   .post-image {
-    min-height: 104vh;
     top: -135px;
     background: url("../images/ok.png") no-repeat center top/cover;
   }
