@@ -82,6 +82,9 @@ p {
   height: 100vh;
   min-height: 1000px;
   background: url("../images/full-img.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .first-screen::before {
@@ -490,7 +493,6 @@ p {
     padding: 0;
   }
   .second-screen__content .content-middle__item {
-    min-height: 220px;
     aspect-ratio: 16/10;
   }
   .second-screen__content .content-middle {
@@ -519,6 +521,10 @@ p {
   }
   .third-screen__content .image-wrap {
     height: 320px;
+  }
+  .third-screen__posttitle {
+    max-width: 350px;
+    text-align: center;
   }
   .footer {
     padding-bottom: 40px;

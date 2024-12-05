@@ -100,6 +100,9 @@ p {
     height: 100vh;
     min-height: 1000px;
     background: url("../images/full-img.png") no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 
     &::before {
@@ -597,7 +600,6 @@ p {
     }
 
     .second-screen__content .content-middle__item {
-        min-height: 220px;
         aspect-ratio: 16 / 10;
     }
 
@@ -626,17 +628,26 @@ p {
     .third-screen {
         margin-top: 0px;
     }
-    .third-screen__content{
+
+    .third-screen__content {
         margin: 0;
         gap: 60px;
     }
-    .third-screen__content .image-wrap{
+
+    .third-screen__content .image-wrap {
         height: 320px;
     }
+
+    .third-screen__posttitle {
+        max-width: 350px;
+        text-align: center;
+    }
+
     .footer {
         padding-bottom: 40px;
     }
-    .footer .logo{
+
+    .footer .logo {
         height: 15px;
     }
 }
