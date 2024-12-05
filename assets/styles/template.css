@@ -451,6 +451,9 @@ p {
     margin: 0 auto 20px auto;
     background: linear-gradient(90deg, #a40cf9 0%, #7654f0 60.18%, #5884ea 100%);
   }
+  .second-screen {
+    background-size: 150%;
+  }
   .second-screen__content .content-top {
     margin: 0 10px 172px 10px;
   }
