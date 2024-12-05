@@ -472,7 +472,7 @@ p {
     gap: 20px;
   }
   .second-screen__content .content-top__item:nth-child(1) .content-top__item-img {
-    padding-top: 20px;
+    padding-top: 0px;
     padding-bottom: 0;
     max-height: 23px;
   }
