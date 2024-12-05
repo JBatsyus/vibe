@@ -47,15 +47,12 @@ body {
 .post-image {
     position: absolute;
     z-index: 99;
-    top: -230px;
+    top: -170px;
     left: 0;
     right: 0;
-}
 
-.post-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+    min-height: 100vh;
+    background: url("../images/ok.png") no-repeat center top -50px / cover;
 }
 
 img {
@@ -402,15 +399,12 @@ p {
 
 @media (max-width: 1780px) {
     .post-image {
+        min-height: 110vh;
         top: -180px;
     }
 }
 
 @media (max-width: 1200px) {
-    .post-image {
-        top: -100px;
-    }
-
     .h2 {
         font-size: rem(48px);
     }
@@ -442,6 +436,10 @@ p {
 
     .h3 {
         font-size: rem(20px);
+    }
+
+    .post-image {
+        min-height: 97vh;
     }
 
     .first-screen__content p {
@@ -486,7 +484,9 @@ p {
 
 @media (max-width: 768px) {
     .post-image {
-        display: none;
+        min-height: 104vh;
+        top: -135px;
+        background: url("../images/ok.png") no-repeat center top / cover;
     }
 
     .h2 {
@@ -545,10 +545,10 @@ p {
         }
     }
 
+    .second-screen {
+        background-size: cover;
+    }
 
-.second-screen{
-    background-size:150%;
-}
     .second-screen__content .content-top {
         margin: 0 10px 172px 10px;
     }
@@ -562,7 +562,6 @@ p {
         max-width: 328px;
         width: 100%;
     }
-
 
     .second-screen__content .content-top__list {
         flex-direction: column;
