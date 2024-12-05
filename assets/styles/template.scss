@@ -626,16 +626,19 @@ p {
 
     .third-screen__content {
         margin: 0;
-        gap: 60px;
+        gap: 30px;
     }
 
     .third-screen__content .image-wrap {
-        height: 320px;
+        // height: 320px;
+        height: 271px;
+        margin-bottom: 30px;
     }
 
     .third-screen__posttitle {
         max-width: 350px;
         text-align: center;
+        font-size: 12px;
     }
 
     .footer {
