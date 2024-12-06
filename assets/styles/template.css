@@ -326,13 +326,14 @@ p {
 }
 
 .footer {
+  margin: 0 auto;
   padding-bottom: 100px;
 }
 .footer .logo {
-  margin: 0 auto;
   height: 30px;
 }
 .footer .logo img {
+  width: auto;
   height: 100%;
 }
 
