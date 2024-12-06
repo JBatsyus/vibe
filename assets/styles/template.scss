@@ -477,9 +477,13 @@ p {
 }
 
 @media (max-width: 768px) {
+    .first-screen__content{
+        z-index: 5;
+    }
     .post-image {
         top: -135px;
         background: url("../images/ok.png") no-repeat center top / cover;
+        z-index: 4;
     }
 
     .h2 {
