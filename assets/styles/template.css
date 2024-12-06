@@ -127,10 +127,9 @@ p {
 }
 .first-screen .linear-gradient {
   padding: 22px 60px;
-  background: linear-gradient(90deg, #a40cf9 0%, #5884ea 100%);
   font-family: "Inter-600", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 32px;
   text-transform: uppercase;
   color: #fff;
   width: max-content;
@@ -433,18 +432,18 @@ p {
     margin-bottom: 20px;
   }
   .first-screen__content p {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 303px;
     width: 100%;
   }
   .first-screen__content a {
-    font-size: 20px;
+    font-size: 16px;
   }
   .first-screen .linear-gradient {
     padding: 12px 30px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
     margin: 0 auto 20px auto;
-    background: linear-gradient(90deg, #a40cf9 0%, #7654f0 60.18%, #5884ea 100%);
   }
   .second-screen {
     background-size: cover;
