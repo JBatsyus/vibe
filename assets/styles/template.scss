@@ -153,7 +153,7 @@ p {
     .linear-gradient {
         padding: 22px 60px;
         font-family: $Inter600;
-        font-weight:bold;
+        font-weight: bold;
         font-size: 32px;
         text-transform: uppercase;
         color: $base-color;
@@ -301,6 +301,23 @@ p {
                 box-sizing: border-box;
                 width: 100%;
                 z-index: 2;
+                text-shadow: 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f;
+                animation: glow 5s infinite ease-in-out;
+            }
+
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow:0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f;
+            }
+
+            50% {
+                text-shadow: 0 0 24px #ff261f, 0 0 24px #ff261f, 0 0 24px #ff261f, 0 0 24px #ff261f;
+            }
+
+            100% {
+                text-shadow: 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f;
             }
         }
 
@@ -478,9 +495,10 @@ p {
 }
 
 @media (max-width: 768px) {
-    .first-screen__content{
+    .first-screen__content {
         z-index: 5;
     }
+
     .post-image {
         top: -135px;
         background: url("../images/ok.png") no-repeat center top / cover;
