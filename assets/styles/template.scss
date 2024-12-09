@@ -309,7 +309,7 @@ p {
 
         @keyframes glow {
             0% {
-                text-shadow:0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f;
+                text-shadow: 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f, 0 0 24px #06f;
             }
 
             50% {
@@ -408,8 +408,24 @@ p {
         height: 30px;
 
         img {
+            display: block;
+            animation: logo-glow 3s infinite ease-in-out;
             width: auto;
             height: 100%;
+        }
+    }
+
+    @keyframes logo-glow {
+        0% {
+            filter: drop-shadow(0 0 24px #06f);
+        }
+
+        50% {
+            filter: drop-shadow(0 0 24px #ff261f);
+        }
+
+        100% {
+            filter: drop-shadow(0 0 24px #06f);
         }
     }
 }
