@@ -127,6 +127,7 @@ p {
         }
 
         .svg {
+            height: 50px;
             margin-bottom: 25px;
         }
 
@@ -402,6 +403,21 @@ p {
 @media (max-width: 1780px) {
     .post-image {
         top: -180px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .first-screen {
+        min-height: 100vh;
+    }
+
+    .first-screen__content .img-wrap {
+        margin-bottom: 53px;
+        max-height: 26vh;
+
+        img {
+            height: 100%;
+        }
     }
 }
 

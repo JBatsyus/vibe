@@ -106,6 +106,7 @@ p {
   height: 100%;
 }
 .first-screen__content .svg {
+  height: 50px;
   margin-bottom: 25px;
 }
 .first-screen__content p {
@@ -340,6 +341,18 @@ p {
 @media (max-width: 1780px) {
   .post-image {
     top: -180px;
+  }
+}
+@media (max-width: 1320px) {
+  .first-screen {
+    min-height: 100vh;
+  }
+  .first-screen__content .img-wrap {
+    margin-bottom: 53px;
+    max-height: 26vh;
+  }
+  .first-screen__content .img-wrap img {
+    height: 100%;
   }
 }
 @media (max-width: 1200px) {
