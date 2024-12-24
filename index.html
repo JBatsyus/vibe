@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    <div class="floating-container" id="floatingContainer">
+        <div class="floating-image" id="floatingImage">
+            <a class="close-btn" id="closeImage">
+                <img src="/assets/images/close.svg" alt="">
+            </a>
+            <div class="floating-video" id="floatingVideo">
+                <iframe id="videoFrame" src="" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <div class="first-screen">
         <div class="first-screen__content container">
             <div class="img-wrap">
@@ -159,6 +170,34 @@
             <img src="./assets/images/Logo_VBI.svg" alt="">
         </div>
     </div>
+
+    <script>
+        const floatingContainer = document.getElementById('floatingContainer');
+        const floatingImage = document.getElementById('floatingImage');
+        const floatingVideo = document.getElementById('floatingVideo');
+        const videoFrame = document.getElementById('videoFrame');
+        const videoSrc = 'https://rutube.ru/play/embed/9223bf1bb7471cd06b75864ee1b7d8c5';
+
+
+        // Открыть видео
+        floatingImage.addEventListener('click', () => {
+            floatingVideo.style.display = 'block';
+            videoFrame.src = videoSrc;
+        });
+
+        // Закрыть контейнер
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                floatingContainer.style.display = 'none';
+                videoFrame.src = '';
+            });
+        });
+
+        // Полноэкранный режим по двойному клику
+        videoFrame.addEventListener('dblclick', () => {
+            floatingVideo.classList.toggle('fullscreen');
+        });
+    </script>
 </body>
 
 </html>

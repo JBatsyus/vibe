@@ -91,6 +91,59 @@ p {
     text-align: center;
     color: $base-color;
 }
+.floating-container {
+    position: fixed;
+    bottom: 30%;
+    left: 0;
+    width: 306px;
+    height: 416px;
+    z-index: 1000;
+}
+
+.floating-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: url('../images/play.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.floating-video {
+    width: 220px;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 58px;
+    left: 26px;
+    display: none;
+    overflow: hidden;
+}
+
+.floating-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 40px;
+    right: 43px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.floating-video.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
 
 .first-screen {
     position: relative;
