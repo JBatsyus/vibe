@@ -75,7 +75,7 @@ p {
 
 .floating-container {
   position: fixed;
-  bottom: 30%;
+  bottom: 0;
   left: 0;
   width: 306px;
   height: 416px;
