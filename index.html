@@ -213,10 +213,38 @@
                 floatingContainerClose.classList.remove('hidden');
             });
         });
+        // Функция для входа в полноэкранный режим
+        const enterFullscreen = () => {
+            if (floatingVideo.requestFullscreen) {
+                floatingVideo.requestFullscreen();
+            } else if (floatingVideo.mozRequestFullScreen) { // Firefox
+                floatingVideo.mozRequestFullScreen();
+            } else if (floatingVideo.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                floatingVideo.webkitRequestFullscreen();
+            } else if (floatingVideo.msRequestFullscreen) { // IE/Edge
+                floatingVideo.msRequestFullscreen();
+            }
+        };
 
-        // Полноэкранный режим по двойному клику
+        // Функция для выхода из полноэкранного режима
+        const exitFullscreen = () => {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { // Firefox
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { // Chrome, Safari и Opera
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // IE/Edge
+                document.msExitFullscreen();
+            }
+        };
+
         videoFrame.addEventListener('dblclick', () => {
-            floatingVideo.classList.toggle('fullscreen');
+            if (document.fullscreenElement) {
+                exitFullscreen();
+            } else {
+                enterFullscreen();
+            }
         });
     </script>
     <script src="timer.js"></script>
