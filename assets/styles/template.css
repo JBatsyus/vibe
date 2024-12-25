@@ -524,7 +524,7 @@ p {
 }
 @media (max-width: 768px) {
   .floating-container-close {
-    bottom: 10px;
+    bottom: 60px;
     left: auto;
     right: 0;
     width: 202px;
@@ -538,7 +538,7 @@ p {
     font-size: 10px;
   }
   .floating-container-open {
-    bottom: 0;
+    bottom: 60px;
     left: auto;
     right: -21px;
     width: 208px;
