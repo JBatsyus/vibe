@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <div class="floating-container" id="floatingContainer">
+    <div class="floating-container-close" id="floatingContainerClose">
+        <img src="./assets/images/Group.png" alt="">
+    </div>
+    <div class="floating-container-open" id="floatingContainer">
         <div class="floating-image" id="floatingImage">
             <a class="close-btn" id="closeImage">
                 <img src="./assets/images/close.svg" alt="">
@@ -173,11 +176,17 @@
 
     <script>
         const floatingContainer = document.getElementById('floatingContainer');
+        const floatingContainerClose = document.getElementById('floatingContainerClose');
         const floatingImage = document.getElementById('floatingImage');
         const floatingVideo = document.getElementById('floatingVideo');
         const videoFrame = document.getElementById('videoFrame');
         const videoSrc = 'https://rutube.ru/play/embed/9223bf1bb7471cd06b75864ee1b7d8c5';
 
+        // Открыть контейнер с видео
+        floatingContainerClose.addEventListener('click', () => {
+            floatingContainer.classList.add('active');
+            floatingContainerClose.classList.add('hidden');
+        });
 
         // Открыть видео
         floatingImage.addEventListener('click', () => {
@@ -188,8 +197,9 @@
         // Закрыть контейнер
         document.querySelectorAll('.close-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                floatingContainer.style.display = 'none';
-                videoFrame.src = '';
+                floatingContainer.classList.remove('active');
+                videoFrame.src = ''; // Остановить видео
+                floatingContainerClose.classList.remove('hidden');
             });
         });
 
