@@ -12,7 +12,18 @@
 
 <body>
     <div class="floating-container-close" id="floatingContainerClose">
-        <img src="./assets/images/Group.png" alt="">
+        <img src="./assets/images/group_desk.png" alt="" class="desktop-v">
+        <img src="./assets/images/group_mob.png" alt="" class="mobile-v">
+
+        <div id="timer" class="timer">
+            <p class="title">До Начала трансляции:</p>
+            <div class="items">
+                <span id="days"> </span> д
+                <span id="hours"></span> ч
+                <span id="minutes"></span> м
+                <span id="seconds"></span> с
+            </div>
+        </div>
     </div>
     <div class="floating-container-open" id="floatingContainer">
         <div class="floating-image" id="floatingImage">
@@ -208,6 +219,7 @@
             floatingVideo.classList.toggle('fullscreen');
         });
     </script>
+    <script src="timer.js"></script>
 </body>
 
 </html>
