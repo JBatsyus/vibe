@@ -79,9 +79,9 @@ p {
   position: fixed;
   z-index: 1000;
   bottom: -10px;
-  left: 0;
-  width: 306px;
-  height: 436px;
+  right: 0;
+  width: 324px;
+  height: 144px;
   cursor: pointer;
   opacity: 1;
   visibility: visible;
@@ -93,19 +93,15 @@ p {
   height: auto;
 }
 
-.mobile-v {
-  display: none;
-}
-
 .desktop-v {
   position: relative;
 }
 
 .timer {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -118,13 +114,14 @@ p {
 .floating-container-open {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 306px;
+  left: auto;
+  right: -35px;
+  width: 335px;
   height: 416px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-30px);
+  transform: translateY(30px);
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
@@ -132,7 +129,7 @@ p {
 .floating-container-open.active {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .floating-container-close.hidden {
@@ -152,12 +149,12 @@ p {
 }
 
 .floating-video {
-  width: 220px;
-  height: 300px;
+  width: 238px;
+  height: 327px;
   border-radius: 10px;
   position: absolute;
-  top: 58px;
-  left: 26px;
+  top: 45px;
+  left: 30px;
   display: none;
   overflow: hidden;
 }
@@ -170,8 +167,8 @@ p {
 
 .close-btn {
   position: absolute;
-  top: 40px;
-  right: 43px;
+  top: 25px;
+  right: 48px;
   cursor: pointer;
   z-index: 1001;
 }
@@ -526,12 +523,6 @@ p {
   }
 }
 @media (max-width: 768px) {
-  .desktop-v {
-    display: none;
-  }
-  .mobile-v {
-    display: block;
-  }
   .floating-container-close {
     bottom: -10px;
     left: auto;
@@ -552,11 +543,6 @@ p {
     right: -21px;
     width: 208px;
     height: 236px;
-    transform: translateY(30px);
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-  }
-  .floating-container-open.active {
-    transform: translateY(0);
   }
   .close-btn {
     top: 7px;
