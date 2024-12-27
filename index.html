@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/normalize.css">
-    <link rel="stylesheet" href="assets/styles/template.css?v=4">
+    <link rel="stylesheet" href="assets/styles/template.css?v=3">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <title>VBI VIBE</title>
 </head>
 
 <body>
     <div class="floating-container-close" id="floatingContainerClose">
-        <img src="./assets/images/group_mob.png" alt="" class="mobile-v">
+       <img src="./assets/images/group_mob.png" alt="" class="mobile-v">
 
         <div id="timer" class="timer">
             <p class="title">До Начала трансляции:</p>
@@ -183,6 +183,9 @@
             <img src="./assets/images/Logo_VBI.svg" alt="">
         </div>
     </div>
+    <style>
+        
+    </style>
 
     <script>
         const floatingContainer = document.getElementById('floatingContainer');
@@ -190,7 +193,8 @@
         const floatingImage = document.getElementById('floatingImage');
         const floatingVideo = document.getElementById('floatingVideo');
         const videoFrame = document.getElementById('videoFrame');
-        const videoSrc = 'https://rutube.ru/play/embed/991a94fd8fa8ec454532a191e816dc79/';
+        const videoSrc = 'https://rutube.ru/play/embed/db2911b4209ad0590c03731d4284298e/';
+
 
         // Открыть контейнер с видео
         floatingContainerClose.addEventListener('click', () => {
@@ -198,11 +202,6 @@
             floatingContainerClose.classList.add('hidden');
         });
 
-        // Открыть видео
-        floatingImage.addEventListener('click', () => {
-            floatingVideo.style.display = 'block';
-            videoFrame.src = videoSrc;
-        });
 
         // Закрыть контейнер
         document.querySelectorAll('.close-btn').forEach(btn => {

@@ -9,6 +9,9 @@ const countdown = () => {
         return;
     }
 
+    const floatingImagejs = document.getElementById('floatingImage');
+    const floatingVideojs = document.getElementById('floatingVideo');
+    const videoFramejs = document.getElementById('videoFrame');
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
@@ -32,6 +35,14 @@ const countdown = () => {
         if (titleElement) {
             titleElement.innerText = 'Трансляция';
             console.log("Текст заголовка изменён.");
+            floatingImagejs.style.backgroundImage = "url(/neonparty/assets/images/broadcast.png)";
+            console.log(floatingImagejs);
+            // Открыть видео
+            floatingImagejs.addEventListener('click', () => {
+                floatingVideojs.style.display = 'block';
+                videoFramejs.src = videoSrc;
+                
+             });
         } else {
             console.error("Элемент с классом 'title' не найден.");
         }
